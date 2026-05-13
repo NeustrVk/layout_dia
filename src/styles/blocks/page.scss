@@ -1,22 +1,13 @@
 .page {
   scroll-behavior: smooth;
 
+  &:has(.page__menu:target) {
+    overflow: hidden;
+  }
+
   &__body {
     min-width: 320px;
     background: $color-bgr-gray-light;
-  }
-
-  &__overlay {
-    pointer-events: none;
-
-    position: fixed;
-    z-index: 5;
-    inset: 0;
-
-    opacity: 0;
-    background: rgba(0, 0, 0, 0.5);
-
-    transition: opacity 0.3s ease;
   }
 
   &__menu {
@@ -24,14 +15,13 @@
     position: fixed;
     inset: 0;
     opacity: 0;
+
+    @include on-small-desktop {
+      display: none;
+    }
   }
 
   &__menu:target {
-    pointer-events: all;
-    opacity: 1;
-  }
-
-  &__menu:target ~ .page__overlay {
     pointer-events: all;
     opacity: 1;
   }

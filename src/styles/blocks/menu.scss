@@ -1,8 +1,11 @@
 .menu {
+  position: fixed;
   z-index: 10;
+  inset: 0;
+
+  overflow: hidden;
 
   width: 100%;
-  max-width: 360px;
   height: 100vh;
 
   background-color: $color-bgr-gray-light;

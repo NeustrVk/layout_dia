@@ -29,7 +29,7 @@
   </head>
   <!-- #endregion -->
   <body class="page__body">
-    <header class="header">
+    <header id="top" class="header">
       <div class="top-bar">
         <div class="top-bar__left">
           <a
@@ -145,89 +145,87 @@
           </div>
         </div>
       </div>
+    </header>
 
-      <aside
-        id="menu"
-        class="page__menu menu"
-      >
-        <div class="top-bar">
-          <div class="top-bar__left">
-            <a
-              href="#"
-              class="top-bar__logo"
-            >
-              <img
-                src="/src/images/logo/air-logo-black.svg"
-                alt="Air logo"
-              />
-            </a>
-          </div>
-
+    <aside
+      id="menu"
+      class="page__menu menu"
+    >
+      <div class="top-bar">
+        <div class="top-bar__left">
           <a
             href="#"
-            class="top-bar__closeIcon"
+            class="top-bar__logo"
           >
-            <svg class="icon icon--close">
-              <use href="/src/images/icons/icons.svg#icon-close"></use>
-            </svg>
+            <img
+              src="/src/images/logo/air-logo-black.svg"
+              alt="Air logo"
+            />
           </a>
         </div>
 
-        <div class="menu__content">
-          <nav class="nav menu__nav">
-            <ul class="nav__list nav__list--column menu__navList">
-              <li class="nav__item">
-                <a
-                  class="nav__link"
-                  href="#about-us"
-                >
-                  About us
-                </a>
-              </li>
-              <li class="nav__item">
-                <a
-                  class="nav__link"
-                  href="#services"
-                >
-                  Services
-                </a>
-              </li>
-              <li class="nav__item">
-                <a
-                  class="nav__link"
-                  href="#testimonials"
-                >
-                  Testimonials
-                </a>
-              </li>
-              <li class="nav__item">
-                <a
-                  class="nav__link"
-                  href="#contacts"
-                >
-                  Contact us
-                </a>
-              </li>
-            </ul>
-          </nav>
+        <a
+          href="#"
+          class="top-bar__closeIcon"
+        >
+          <svg class="icon icon--close">
+            <use href="/src/images/icons/icons.svg#icon-close"></use>
+          </svg>
+        </a>
+      </div>
 
-          <a
-            href="tel: 654 321 987"
-            class="menu__phone-number"
-          >
-            654 321 987
-          </a>
-          <a
-            href="#contactForm"
-            class="menu__hire-us"
-          >
-            Hire us
-          </a>
-        </div>
-      </aside>
+      <div class="menu__content">
+        <nav class="nav menu__nav">
+          <ul class="nav__list nav__list--column menu__navList">
+            <li class="nav__item">
+              <a
+                class="nav__link"
+                href="#about-us"
+              >
+                About us
+              </a>
+            </li>
+            <li class="nav__item">
+              <a
+                class="nav__link"
+                href="#services"
+              >
+                Services
+              </a>
+            </li>
+            <li class="nav__item">
+              <a
+                class="nav__link"
+                href="#testimonials"
+              >
+                Testimonials
+              </a>
+            </li>
+            <li class="nav__item">
+              <a
+                class="nav__link"
+                href="#contacts"
+              >
+                Contact us
+              </a>
+            </li>
+          </ul>
+        </nav>
 
-      <div class="page__overlay"></div>
-    </header>
+        <a
+          href="tel: 654 321 987"
+          class="menu__phone-number"
+        >
+          654 321 987
+        </a>
+        <a
+          href="#contactForm"
+          class="menu__hire-us"
+        >
+          Hire us
+        </a>
+      </div>
+    </aside>
 
     <main class="site-main">
       <section
@@ -484,8 +482,7 @@
             <h2 class="contacts__title">Send us a message</h2>
             <form
               class="contacts__form-body"
-              action="#"
-              method="get"
+              onsubmit="this.reset(); window.location.hash='top'; return false;"
             >
               <input
                 class="contacts__input"
